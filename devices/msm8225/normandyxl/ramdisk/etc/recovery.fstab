@@ -1,0 +1,10 @@
+/sys_boot  vfat   /dev/block/mmcblk0p3                        flags=backup=1;display="Bootloader"
+/persist   emmc   /dev/block/mmcblk0p16                       flags=display="Persist";backup=1
+/boot      emmc   /dev/block/mmcblk0p17                       flags=display="Boot"
+/recovery  emmc   /dev/block/mmcblk0p14                       flags=display="Recovery";backup=1                   
+/cache     ext4   /dev/block/mmcblk0p19                       flags=display="Cache"
+/system    ext4   /dev/block/mmcblk0p18                       flags=backup=1;display="System"
+/data      ext4   /dev/block/mmcblk0p22                       length=-16384 flags=display="Data"
+/sdcard1   vfat   /dev/block/mmcblk0p21                       flags=display="Internal SD";storage;wipeingui;removable;settingsstorage
+/sdcard    vfat   /dev/block/mmcblk1p1                        /dev/block/mmcblk1 flags=display="Micro SD";storage;wipeingui;removable;settingsstorage
+/full     emmc   /dev/block/mmcblk0                          flags=backup=1;display="eMMC"

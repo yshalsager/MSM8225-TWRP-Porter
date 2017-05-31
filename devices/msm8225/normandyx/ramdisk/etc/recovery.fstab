@@ -1,0 +1,23 @@
+# Copyright (c) 2011, The Linux Foundation. All rights reserved.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# mount point    fstype      device                   [device2]
+/sys_boot        vfat        /dev/block/mmcblk0p3     flags=backup=1;display="MBN"
+/boot            emmc	       /dev/block/mmcblk0p17    flags=display="Boot"
+/recovery        emmc	       /dev/block/mmcblk0p14    flags=backup=1;display="Recovery"
+/cache           ext4        /dev/block/mmcblk0p19    flags=display="Cache"
+/data            ext4        /dev/block/mmcblk0p22    length=-16384 flags=display="Data"
+/sdcard1         vfat        /dev/block/mmcblk0p21    flags=display="Internal SD";wipeingui
+/system          ext4        /dev/block/mmcblk0p18    flags=backup=1;display="System"
+/sdcard          vfat        /dev/block/mmcblk1p1     /dev/block/mmcblk1 flags=display="Micro SD";storage;wipeingui;removable;settingsstorage
